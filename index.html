@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="libs/animate/animate.css">
+	
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<script src="libs/modernizr/modernizr.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Здесь пишем код -->
+	
+	<div class="hidden"></div>
+
+	<div class="loader">
+		<div class="loader_inner"></div>
+	</div>
+	
+	<div class="modal">
+		<div class="modal__overlay"></div>
+		<div class="modal__wrapper">
+			<div class="modal__close"></div>
+			<h3 class="modal__title">Записаться на консультацию</h3>
+			<form enctype="multipart/form-data" method="post" id="form_modal" onsubmit="send(event, '/mail.php')" class="modal__form">
+				<input type="text" name="name" id="name" placeholder="Ваше имя" class="form__input">
+				<input type="tel" name="phone" id="phone" placeholder="Ваш телефон" class="form__input">
+				<div class="politics">
+					<input type="checkbox" class="custom-checkbox" id="politic" name="politic" value="yes">
+					<label for="politic">Я согласен с <a href="https://yukpravo.ru/privacy_policy.html" class="politic__link">политикой конфиденциальности</a></label>
+				</div>
+				<input type="submit" value="Записаться" class="form__submit">
+			</form>
+		</div>
+	</div>
+
+	<header class="header">
+		<div class="header__wrapper">
+			<a href="/" class="logo">
+				<span class="small">ООО ЮК</span>
+				<span class="large">Право</span>
+			</a>
+			<nav class="nav">
+				<ul>
+					<li><a href="#" class="nav__link">О нас</a></li>
+					<li><a href="#" class="nav__link">Услуги</a></li>
+					<li><a href="#" class="nav__link">Преимущества</a></li>
+					<li><a href="#" class="nav__link">Этапы работы</a></li>
+					<li><a href="#" class="nav__link">Отзывы</a></li>
+					<li><a href="#" class="nav__link">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header__call">
+				<a href="tel:+79374979032" class="header__phone">+7 (937) 497-90-32</a>
+				<a href="#" class="header__form modal__btn">Заказать звонок</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="top__screen" id="main">
+			<div class="section__wrapper main">
+				<img src="img/person.png" alt="" class="person">
+				<div class="top__screen__info">
+					<h1 class="section__title">Юридическая помощь Бизнесу и физическим лицам</h1>
+					<div class="help__items">
+						<ul>
+							<li>Арбитражные споры</li>
+							<li>Помощь бизнесу</li>
+							<li>Банкротство</li>
+							<li>Помощь физическим лицам</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="top__form">
+			<div class="form__wrapper">
+				<h2 class="form__title">Записаться на бесплатную консультацию</h2>
+				<form enctype="multipart/form-data" method="post" id="form_1" onsubmit="send(event, '/mail.php')" class="call__form">
+					<input type="text" name="name" id="name" placeholder="Ваше имя" class="form__input">
+					<input type="tel" name="phone" id="phone" placeholder="Ваш телефон" class="form__input">
+					<input type="submit" value="Записаться" class="form__submit">
+				</form>
+			</div>
+		</section>
+
+		<section class="about" id="about">
+			<div class="section__wrapper">
+				<h2 class="section__title color">О нас</h2>
+				<div class="about__info">
+					<div class="about__text">
+						Наши юристы, арбитражные управляющие, специалисты на рынке юридических услуг более 8 лет, бесплатно проконсультируют Вас в любой области права. Индивидуальный подход к клиенту. Работаем на всей территории России. Правовой анализ ситуации. Подготовка договоров, жалоб, претензий, исков по желанию клиента. Участие в судебных процессах.
+						<span class="author">Денис Михайлович - юрист, арбитражный управляющий</span>
+					</div>
+					<div class="about__img">
+						<img src="img/author.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="facts">
+					<div class="fact">
+						<div class="fact__title"><span class="small__text">c</span>2014</div>
+						<div class="fact__info">года на рынке</div>
+					</div>
+					<div class="fact">
+						<div class="fact__title">400+</div>
+						<div class="fact__info">выигранных дел в арбитражных судах и судах общей юрисдикции</div>
+					</div>
+					<div class="fact">
+						<div class="fact__title">50+</div>
+						<div class="fact__info">завершенных процедур банкротства юридических лиц</div>
+					</div>
+					<div class="fact">
+						<div class="fact__title">70+</div>
+						<div class="fact__info">сделок признано недействительными</div>
+					</div>
+					<div class="fact">
+						<div class="fact__title">300+</div>
+						<div class="fact__info">завершено процедур банкротства физизических лиц</div>
+					</div>
+					<div class="fact">
+						<div class="fact__title">20+</div>
+						<div class="fact__info">привлечено к ответственности контролирующих лиц должника</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="projects">
+			<div class="section__wrapper">
+				<h2 class="section__title">Наши дела</h2>
+				<div class="projects__items">
+					<div class="project__item">
+						<div class="project__name">Списание долгов с физ. лица</div>
+						<a href="https://yukpravo.ru/static/files/file_1.pdf" class="project__download"></a>
+					</div>
+					<div class="project__item">
+						<div class="project__name">Отказ Администрации в иске</div>
+						<a href="https://yukpravo.ru/static/files/file_5.pdf" class="project__download"></a>
+					</div>
+					<div class="project__item">
+						<div class="project__name">Взыскание долгов с ООО</div>
+						<a href="https://yukpravo.ru/static/files/file_2.pdf" class="project__download"></a>
+					</div>
+					<div class="project__item">
+						<div class="project__name">Взыскание долга с контрагента</div>
+						<a href="https://yukpravo.ru/static/files/file_6.pdf" class="project__download"></a>
+					</div>
+					<div class="project__item">
+						<div class="project__name">Списание долгов с физ. лица</div>
+						<a href="https://yukpravo.ru/static/files/file_3.pdf" class="project__download"></a>
+					</div>
+					<div class="project__item">
+						<div class="project__name">Процедура РИГ со списанием</div>
+						<a href="https://yukpravo.ru/static/files/file_7.pdf" class="project__download"></a>
+					</div>
+					<div class="project__item">
+						<div class="project__name">Банкротство со списанием долгов</div>
+						<a href="https://yukpravo.ru/static/files/file_4.pdf" class="project__download"></a>
+					</div>
+					<div class="project__item">
+						<div class="project__name">Арбитражный суд</div>
+						<a href="https://yukpravo.ru/static/files/file_8.pdf" class="project__download"></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="work" id="work">
+			<div class="section__wrapper">
+				<h2 class="section__title">Услуги</h2>
+				<div class="work__btns">
+					<div class="work__btn__wrapper"><div class="work__btn fiz active">УСЛУГИ ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</div></div>
+					<div class="work__btn__wrapper"><div class="work__btn bus">УСЛУГИ ДЛЯ БИЗНЕСА</div></div>
+				</div>
+				<div class="work__items">
+					<div class="work__container fiz active">
+						<div class="work__item">
+							<img src="img/fiz_1.svg" alt="">
+							<span class="work__text">КОНСУЛЬТАЦИЯ ПО ВОПРОСАМ СЕМЕЙНОГО, ТРУДОВОГО И ЗЕМЕЛЬНОГО ПРАВА</span>
+						</div>
+						<div class="work__item">
+							<img src="img/fiz_2.svg" alt="">
+							<span class="work__text">БАНКРОТСТВО ФИЗИЧЕСКИХ ЛИЦ</span>
+						</div>
+						<div class="work__item">
+							<img src="img/fiz_3.svg" alt="">
+							<span class="work__text">ЗАЩИТА ПРАВ ПОТРЕБИТЕЛЕЙ</span>
+						</div>
+						<div class="work__item">
+							<img src="img/fiz_4.svg" alt="">
+							<span class="work__text">ПОМОЩЬ ПРИ ДТП</span>
+						</div>
+					</div>
+
+					<div class="work__container bus">
+						<div class="work__item">
+							<img src="img/bus_1.svg" alt="">
+							<span class="work__text">АНАЛИЗ И ПОДГОТОВКА ДОГОВОРОВ</span>
+						</div>
+						<div class="work__item">
+							<img src="img/bus_2.svg" alt="">
+							<span class="work__text">БАНКРОТСТВО ЮРИДИЧЕСКИХ ЛИЦ, ОБЖАЛОВАНИЕ СДЕЛОК, ПРИВЛЕЧЕНИЕ КОНТРОЛИРУЮЩИХ ЛИЦ ДОЛЖНИКА К ОТВЕТСТВЕННОСТИ</span>
+						</div>
+						<div class="work__item">
+							<img src="img/bus_3.svg" alt="">
+							<span class="work__text">РЕГИСТРАЦИЯ И ЛИКВИДАЦИЯ ЮРИДИЧЕСКИХ ЛИЦ</span>
+						</div>
+						<div class="work__item">
+							<img src="img/bus_4.svg" alt="">
+							<span class="work__text">ВЗЫСКАНИЕ ЗАДОЛЖЕННОСТИ В СУДЕБНОМ ПОРЯДКЕ</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="work__modals">
+					<a href="#" class="work__modal btn modal__btn">Получить бесплатную консультацию</a>
+					<a href="#" class="work__modal btn modal__btn">Получить полный перечень услуг</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="benefits" id="benefits">
+			<div class="section__wrapper">
+				<h2 class="section__title">Наши преимущества</h2>
+				<div class="benefits__items">
+					<div class="benefits__item">
+						<img src="img/ben_1.png" alt="">
+						<h3 class="benefits__title">Опытные юристы</h3>
+					</div>
+					<div class="benefits__item">
+						<img src="img/ben_2.png" alt="">
+						<h3 class="benefits__title">Бесплатная консультация</h3>
+					</div>
+					<div class="benefits__item">
+						<img src="img/ben_3.png" alt="">
+						<h3 class="benefits__title">Репутация</h3>
+					</div>
+					<div class="benefits__item">
+						<img src="img/ben_4.png" alt="">
+						<h3 class="benefits__title">Конфиденциальность</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="steps" id="steps">
+			<div class="section__wrapper">
+				<h2 class="section__title">Этапы работы</h2>
+				<div class="steps__items">
+					<div class="step one">
+						<div class="step__num">1</div>
+						<div class="step__text">Бесплатная консультация</div>
+					</div>
+					<div class="step two">
+						<div class="step__num">2</div>
+						<div class="step__text">Собираем пакет документов</div>
+					</div>
+					<div class="step three">
+						<div class="step__num">3</div>
+						<div class="step__text">Проводим экспертизу Ваших документов</div>
+					</div>
+					<div class="step four">
+						<div class="step__num">4</div>
+						<div class="step__text">Защищаем Ваши интересы в суде</div>
+					</div>
+					<div class="step five">
+						<div class="step__num">5</div>
+						<div class="step__text">Получаем решение суда</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="rating" id="rating">
+			<div class="section__wrapper">
+				<h2 class="section__title">ОТЗЫВЫ КЛИЕНТОВ И РЕКОМЕНДАЦИИ ПАРТНЕРОВ</h2>
+				<div class="rating__btns">
+					<a href="https://go.2gis.com/rvmfzv" target="_blank" class="rating__btn btn">Посмотреть отзывы</a>
+					<div href="#" class="rating__btn btn modal__btn">РЕКОМЕНДАЦИИ</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="contacts" id="contacts">
+			<div class="map">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5b81a05b235f86f4ee8a6ff6afe383decd8cc0bab393b2b7bfc609e75ce73716&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+			</div>
+			<div class="section__wrapper">
+				<div class="contact__info">
+					<h2 class="section__title">Контакты</h2>
+					<div class="contact__items">
+						<div class="contact__item">
+							<img src="img/icons8-address-50.png" alt="">
+							<div class="contact__value">г. Уфа, ул.Пушкина, д.45 корпус 1, домофон №14</div>
+						</div>
+						<div class="contact__item">
+							<img src="img/icons8-date-50.png" alt="">
+							<div class="contact__value">Пн-Пт: c 9:00 до 18:00</div>
+						</div>
+						<div class="contact__item">
+							<img src="img/icons8-email-50.png" alt="">
+							<a href="mailto:oooyuk.pravo@mail.ru" class="contact__value">oooyuk.pravo@mail.ru</a>
+						</div>
+						<div class="contact__item">
+							<img src="img/icons8-phone-50.png" alt="">
+							<a href="tel:+79374979032" class="contact__value">+7 (937) 497-90-32</a>
+						</div>
+						<div class="contact__item">
+							<img src="img/icons8-telegram-50.png" alt="">
+							<a href="https://t.me/89374979032" class="contact__value">Написать в Telegram</a>
+						</div>
+						<div class="contact__item">
+							<img src="img/icons8-whatsapp-50.png" alt="">
+							<a href="https://wa.me/89374979032" class="contact__value">Написать в WhatsApp</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer__wrapper">
+				<a href="/" class="logo footer__logo">
+					<span class="small">ООО ЮК</span>
+					<span class="large">Право</span>
+				</a>
+
+				<div class="copyright">
+					<div class="politics__right">Продолжая использовать сайт, вы соглашаетесь на использование файлов cookie. <a href="https://yukpravo.ru/privacy_policy.html">Политика конфиденциальности</a></div>
+					<div class="copyright__text">2023 © ООО ЮК "Право". Все права защищены. Материалы, представленные на сайте, не являются публичной офертой.</div>
+				</div>
+			</div>
+		</footer>
+	</main>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/waypoints/waypoints.min.js"></script>
+	<script src="libs/animate/animate-css.js"></script>
+	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script>
+    SmoothScroll({
+        animationTime    : 800,
+        stepSize         : 75,
+
+        
+        accelerationDelta : 30,  
+        accelerationMax   : 2,   
+
+
+        keyboardSupport   : true,  
+        arrowScroll       : 50,
+
+
+        pulseAlgorithm   : true,
+        pulseScale       : 4,
+        pulseNormalize   : 1,
+
+        touchpadSupport   : true,
+    })
+    </script>
+    <script>
+		function send(event, php){
+		console.log("Отправка запроса");
+		event.preventDefault ? event.preventDefault() : event.returnValue = false;
+		var req = new XMLHttpRequest();
+		req.open('POST', php, true);
+		req.onload = function() {
+			if (req.status >= 200 && req.status < 400) {
+			json = JSON.parse(this.response); // Ебанный internet explorer 11
+				console.log(json);
+				
+				// ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+				if (json.result == "success") {
+					// Если сообщение отправлено
+					event.target.value = 'Спасибо'
+
+                    document.querySelectorAll('form').forEach( (form) => {
+                        setTimeout( () => {
+                            form.reset(); 
+                        }, 500)
+                    })
+
+                    document.querySelectorAll('input[type="submit"]').forEach( (btn) => {
+                        btn.value = 'Спасибо!'
+                        setTimeout(()=> {
+                            btn.value = 'Записаться на прием'
+                        }, 3000)
+                    })
+				} else {
+					// Если произошла ошибка
+					alert("Ошибка. Сообщение не отправлено!");
+				}
+			// Если не удалось связаться с php файлом
+			} else {alert("Ошибка сервера. Номер: "+req.status);}}; 
+		
+		// Если не удалось отправить запрос. Стоит блок на хостинге
+		req.onerror = function() {alert("Ошибка отправки запроса");};
+		req.send(new FormData(event.target));
+		}
+	</script>
+	
+	<script src="js/common.js"></script>
+	
+</body>
+</html>
